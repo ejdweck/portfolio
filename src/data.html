@@ -1,0 +1,12 @@
+<html>
+<body>
+  <pre id='data'></pre>
+</body>
+<script>
+  const onDataLoaded = (data) => {
+    const e20Content = data.feed.entry.find((entry) => entry.title.$t == 'E20').content.$t
+    document.getElementById('data').innerHTML = e20Content
+  }
+</script>
+<script src="https://spreadsheets.google.com/feeds/cells/1TbMrtJl01i-Q5YudlhdAB_E1LTYkkLswnql5LHyiIuk/1/public/basic?alt=json-in-script&callback=onDataLoaded"></script>
+</html>
