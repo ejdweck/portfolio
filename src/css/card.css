@@ -1,0 +1,13 @@
+.project-card {
+	width: 100%;
+	margin: 0 auto;
+}
+
+#chatroom-gif {
+	width: 100%;
+	height: auto;
+}
+
+.card-header {
+	font-size: 30px;
+}

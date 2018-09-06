@@ -1,0 +1,35 @@
+import React, { Component } from 'react'
+import { Image, Grid, Row, Col } from 'react-bootstrap'
+import '../css/card.css'
+import demo from '../img/trailblazers-chatroom.gif'
+import { SocialIcon } from 'react-social-icons';
+
+const Card = (args) => {
+	let styles = "card border-" + args['style'] + " mb-3"
+	return (
+		<div className="project-card">
+			<div className={styles} >
+			  <div className="card-header">{args['projectTitle']}</div>
+			  <div className="card-body">
+			  	<Grid>
+				  	<Row>
+				  		<Col xs={12} md={6}>
+						    <h3 className="card-title">Description</h3>
+						    <p className="card-text">{args['description']}</p>
+								<h3 className="card-title">Technologies Used</h3>
+						    <p className="card-text">{args['technologies']}</p>
+								<SocialIcon className="icon" url={args['repo']} />
+					    </Col>
+				  		<Col xs={12} md={6}>
+				  			<h3>Demo</h3>
+						    <Image id="chatroom-gif" src={args['gif']} />
+					    </Col>
+				    </Row>
+			    </Grid>
+			  </div>
+			</div>
+		</div>
+	)
+}
+
+export default Card
