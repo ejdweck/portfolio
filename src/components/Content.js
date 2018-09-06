@@ -51,7 +51,8 @@ export class Work extends Component {
 							</Col>
 							<Col md={8} mdPush={8} sm={12}>
 								<h4>Nourish Technology</h4>
-								<h5>Software Engineer Intern | Summer 2018</h5>
+
+								<h5>Software Engineer Intern | San Francisco Bay Area | Summer 2018</h5>
 								<h6>Teaching intelligent robotic systems how to cook, package and serve food.</h6>
 								<h6>Full Stack Development</h6>
 							</Col>
@@ -63,7 +64,7 @@ export class Work extends Component {
 							</Col>
 							<Col md={8} mdPush={8} sm={12}>
 								<h4>Persistent Systems</h4>
-								<h5>Software Engineer Intern | Summer 2017</h5>
+								<h5>Software Engineer Intern | New York, NY | Summer 2017</h5>
 								<h6>The worlds most scalable mobile ad hoc network. Persistent’s Wave Relay® Manet unites the internet of battlefield things (iobt) in a high throughput, self-forming, and self-healing network. The Wave Relay® ecosystem connects soldiers, sensors, unmanned systems, and cameras in a dynamic network that goes beyond mesh.</h6>
 								<h6>Application Development</h6>
 							</Col>
@@ -75,7 +76,7 @@ export class Work extends Component {
 							</Col>
 							<Col md={8} mdPush={8} sm={12}>
 								<h4>Thomson Reuters</h4>
-								<h5>Software Engineer Intern | Summer 2016</h5>
+								<h5>Software Engineer Intern | Eagan, MN | Summer 2016</h5>
 								<h6>Thomson Reuters offers legal products and services to help our customers find trusted answers to the pressing needs of the legal industry.</h6>
 								<h6>Scale Infrascructure Development</h6>
 							</Col>
@@ -87,7 +88,7 @@ export class Work extends Component {
 							</Col>
 							<Col md={8} mdPush={8} sm={12}>
 								<h4>Magic Touch Fishing charters</h4>
-								<h5>First Mate | Summers 2014-2015</h5>
+								<h5>First Mate | Greenwich, CT | Summers 2014-2015</h5>
 								<h6>Whether it's a kids first fishing trip, or an avid group of anglers, Magic Touch will make you feel right at home. we structure each and every trip specifically for your group, going out of our way to meet all of your expectations. Top grade tackle, fresh bait, expert fillet service, and attention to detail set us apart from the rest. We always go the extra mile to put fish in the box and a smile on your face.</h6>
 							</Col>
 						</Row>
