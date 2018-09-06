@@ -122,7 +122,7 @@ export class Projects extends Component {
 								style="success"
 								projectTitle="The Real Course Guide"
 								description="The Real Course Guide is a community sourced tool intended to help students pick good & meaningful courses."
-								technologies=""
+								technologies="Python, Django, Sqlite3, Bootstrap"
 								repo="https://github.com/ejdweck/rate_courses"
 								gif={realcourseguidedemo}
 							/>
