@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Image, Grid, Row, Col } from 'react-bootstrap'
 import '../css/card.css'
-import demo from '../img/trailblazers-chatroom.gif'
 import { SocialIcon } from 'react-social-icons';
 
 const Card = (args) => {
