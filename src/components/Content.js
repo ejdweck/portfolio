@@ -10,6 +10,7 @@ import Card from './Card'
 
 import trailblazersdemo from '../img/trailblazers-chatroom.gif'
 import realcourseguidedemo from '../img/realcourseguide.gif'
+import bboxdemo from '../img/bbox.gif'
 
 export class Education extends Component {
 	render() {
@@ -56,6 +57,20 @@ export class Work extends Component {
 								<h6>Teaching intelligent robotic systems how to cook, package and serve food.</h6>
 								<h6>Full Stack Development</h6>
 							</Col>
+							<br />
+							<br />
+							<br />
+							<br />
+							<br />
+							<br />
+							<Card
+								style="warning"
+								projectTitle="order.breakfastbox.com"
+								description="Web ordering platform for Bbox"
+								technologies="React, Redux, React-Bootstrap"
+								repo=""
+								gif={bboxdemo}
+							/>
 						</Row>
 						<hr />
 						<Row className="work-row">

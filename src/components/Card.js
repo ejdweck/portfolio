@@ -5,6 +5,10 @@ import { SocialIcon } from 'react-social-icons';
 
 const Card = (args) => {
 	let styles = "card border-" + args['style'] + " mb-3"
+	let socialIcon = null
+	if (args['repo'] != "") {
+		socialIcon = <SocialIcon className="icon" url={args['repo']} />
+	}
 	return (
 		<div className="project-card">
 			<div className={styles} >
@@ -17,7 +21,7 @@ const Card = (args) => {
 						    <p className="card-text">{args['description']}</p>
 								<h3 className="card-title">Technologies Used</h3>
 						    <p className="card-text">{args['technologies']}</p>
-								<SocialIcon className="icon" url={args['repo']} />
+								{socialIcon}
 					    </Col>
 				  		<Col xs={12} md={6}>
 				  			<h3>Demo</h3>
