@@ -11,6 +11,7 @@ import Card from './Card'
 import trailblazersdemo from '../img/trailblazers-chatroom.gif'
 import realcourseguidedemo from '../img/realcourseguide.gif'
 import bboxdemo from '../img/bbox.gif'
+import mobilebboxdemo from '../img/nourish-bbox-mobile.gif'
 
 export class Education extends Component {
 	render() {
@@ -63,6 +64,15 @@ export class Work extends Component {
 							<br />
 							<br />
 							<br />
+							<Card
+								style="warning"
+								projectTitle="Bbox Mobile Application"
+								description="Mobile ordering platform for Bbox"
+								technologies="React Native, React-Navigation, Formik, Expo"
+								repo=""
+								gif={mobilebboxdemo}
+								appType="mobile"
+							/>
 							<Card
 								style="warning"
 								projectTitle="order.breakfastbox.com"

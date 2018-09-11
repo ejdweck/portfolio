@@ -9,6 +9,10 @@ const Card = (args) => {
 	if (args['repo'] != "") {
 		socialIcon = <SocialIcon className="icon" url={args['repo']} />
 	}
+	let demoClass = 'chatroom-gif'
+	if(args['appType'] == 'mobile') {
+		demoClass = 'mobile-gif'
+	}
 	return (
 		<div className="project-card">
 			<div className={styles} >
@@ -25,7 +29,8 @@ const Card = (args) => {
 					    </Col>
 				  		<Col xs={12} md={6}>
 				  			<h3>Demo</h3>
-						    <Image id="chatroom-gif" src={args['gif']} />
+
+						    <Image id={demoClass} src={args['gif']} />
 					    </Col>
 				    </Row>
 			    </Grid>

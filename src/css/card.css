@@ -8,6 +8,11 @@
 	height: auto;
 }
 
+#mobile-gif {
+	height: 400px;
+	width: auto;
+}
+
 .card-header {
 	font-size: 30px;
 }
