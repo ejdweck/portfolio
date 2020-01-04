@@ -23,6 +23,7 @@ const StyledHeadshot = styled.img`
   margin-bottom: 50px;
 
   @media screen and (max-width: 575px) {
+    width: 100px;
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 0px;
