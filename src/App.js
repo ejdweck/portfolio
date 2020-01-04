@@ -19,8 +19,8 @@ import ProjectRow from './components/ProjectRow'
 const StyledHeadshot = styled.img`
   border-radius: 128px;
   width: 200px;
-  margin-top: 60px;
-  // margin-bottom: 5%;
+  margin-top: 40px;
+  margin-bottom: 40px;
 
   @media screen and (max-width: 575px) {
     width: 100px;
@@ -56,8 +56,6 @@ const StyledAppContainer = styled.div`
 `
 
 const StyledName = styled.span`
-  // margin-top: 50px;
-  margin-top: 10%;
   font-size: 70px;
   text-align: center;
 
@@ -72,6 +70,10 @@ const StyledName = styled.span`
 const StyledLandingTitle = styled.span`
   font-size: 60px;
   text-align: center;
+
+  @media screen and (max-width: 900px) {
+    font-size: 40px;
+  }
 
   @media screen and (max-width: 575px) {
     margin-left: 0px;
@@ -99,10 +101,13 @@ const StyledTitle = styled.span`
 const StyledMoreInfo = styled.span`
   font-size: 40px;
   text-align: center;
+  
+  @media screen and (max-width: 900px) {
+    font-size: 32px;
+  }
 
   @media screen and (max-width: 575px) {
     background-color: 'pink';
-    // margin-top: 55%;
     margin-left: 0px;
     margin-right: 0px;
     font-size: 25px;
@@ -153,18 +158,16 @@ const StyledColumn = styled.div`
 `
 
 const StyledFadeContainer = styled.div`
-  // margin-top: 60px;
-  margin-top: 10%;
+  margin-top: 5%;
   margin-left: 100px;
   margin-right: 100px;
   @media screen and (max-width: 575px) {
-    // margin-top: %;
+    margin-top: 10%;
     margin-left: 0px;
     margin-right: 0px;
     font-size: 25px;
     text-align: center;
   }
-
 `
 
 
