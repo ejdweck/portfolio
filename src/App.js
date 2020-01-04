@@ -39,7 +39,12 @@ const StyledAppContainer = styled.div`
   margin-left: 35px;
   margin-right: 35px;
   text-align: center;
- 
+
+ @media screen and (max-width: 575px) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
   // @media screen and (orientation:landscape) {
   //   -ms-transform: rotate(-90deg); /* IE 9 */
   //   -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
