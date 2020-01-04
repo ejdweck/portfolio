@@ -28,6 +28,7 @@ const StyledHeadshot = styled.img`
     margin-bottom: 20px;
     margin-left: 0px;
     margin-right: 0px;
+    text-align: left;
   }
 `
 
@@ -71,7 +72,7 @@ const StyledLandingTitle = styled.span`
     margin-left: 0px;
     margin-right: 0px;
     font-size: 25px;
-    text-align: center;
+    text-align: left;
   }
 `
 
@@ -100,6 +101,7 @@ const StyledMoreInfo = styled.span`
     margin-left: 0px;
     margin-right: 0px;
     font-size: 25px;
+    text-align: left;
   }
 `
 
