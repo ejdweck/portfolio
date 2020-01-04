@@ -20,6 +20,7 @@ const StyledHeadshot = styled.img`
   border-radius: 128px;
   width: 200px;
   margin-top: 60px;
+  margin-bottom: 50px;
 `
 
 const StyledAppContainer = styled.div`
@@ -50,7 +51,7 @@ const StyledAppContainer = styled.div`
 
 const StyledName = styled.span`
   margin-top: 50px;
-  font-size: 80px;
+  font-size: 70px;
   text-align: center;
 
   @media screen and (max-width: 575px) {
@@ -247,7 +248,9 @@ class App extends Component {
         <StyledAppContainer>
           <StyledHeadshot src={evan}/>
             <StyledColumn>
-              <StyledName style={{ color: '#181818' }}>Evan Dweck</StyledName>
+              <a href="https://www.linkedin.com/in/evan-dweck-0a4657b6/" target="_blank" style={{ textDecoration: 'none'}}>
+                <StyledName style={{ color: '#181818' }} href="google.com">Evan Dweck</StyledName>
+              </a>
               <StyledFadeContainer>
                 <Fade duration={3500} delay={500}>
                   <StyledLandingTitle style={{ color: '#181818' }}>

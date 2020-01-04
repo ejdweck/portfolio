@@ -28,17 +28,21 @@ const StyledRow = styled.span`
 
 const StyledColumn = styled.span`
   display: flex;
-  flex-direction: column;
+	flex-direction: column;
+	background-color: green;
   // flex: 1;
 `
 
 const StyledParagraph = styled.p`
   font-size: 30px;
-  margin-right: 35px;
+	margin-left: 35px;
+	margin-top: 0px;
+	background-color: pink;
+
   @media screen and (max-width: 1000px) {
     text-align: left;
     font-size: 20px;
-    margin-right: 0px;
+    margin-left: 0px;
   }
 `
 
@@ -77,13 +81,19 @@ class ProjectRow extends Component {
 	render() {
 		const { projectTitle, src } = this.props
 		return (
-			<StyledRow>
+			<React.Fragment>
 				<StyledColumn>
 					<StyledProjectTitle>{projectTitle}</StyledProjectTitle>
-					{this.renderParagraphs()}
 				</StyledColumn>
-				<StyledImage src={src}/>
-			</StyledRow>
+				<StyledRow>
+					<StyledColumn>
+						<StyledImage src={src}/>
+					</StyledColumn>
+					<StyledColumn>
+						{this.renderParagraphs()}
+					</StyledColumn>
+				</StyledRow>
+			</React.Fragment>
 		)
 	}
 }
