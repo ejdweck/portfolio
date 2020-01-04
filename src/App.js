@@ -1,21 +1,25 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
+import Typist from 'react-typist';
+import Fade from 'react-reveal/Fade';
 
 // imgs
 import evan from './img/headshot.jpeg'
+
 // svgs
 import dash from './img/name-underline.svg'
-import melons from './img/melons.gif'
+import anvil from './img/anvil.svg'
 import todov1 from './img/todo-concept-v1.svg'
-import Typist from 'react-typist';
+
+// gifs
+import melons from './img/melons.gif'
 import ProjectRow from './components/ProjectRow'
 
-import Fade from 'react-reveal/Fade';
 
 const StyledHeadshot = styled.img`
   border-radius: 128px;
   width: 200px;
-  margin-top: 40px;
+  margin-top: 60px;
 `
 
 const StyledAppContainer = styled.div`
@@ -23,26 +27,30 @@ const StyledAppContainer = styled.div`
   flex-direction: column;
   align-items: center;
   height: 100vh;
-
-  @media screen and (orientation:landscape) {
-    -ms-transform: rotate(-90deg); /* IE 9 */
-    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
-    transform: rotate(-90deg);
-    // width: /* screen width */ ;
-    height: 100vh;
-    overflow: scroll;
-  }
-`
-
-const StyledContainer = styled(StyledAppContainer)`
   margin-left: 35px;
   margin-right: 35px;
-  color: #181818,
+  text-align: center;
+ 
+  // @media screen and (orientation:landscape) {
+  //   -ms-transform: rotate(-90deg); /* IE 9 */
+  //   -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+  //   transform: rotate(-90deg);
+  //   // width: /* screen width */ ;
+  //   height: 100vh;
+  //   overflow: scroll;
+  // }
 `
 
+// const StyledContainer = styled(StyledAppContainer)`
+//   margin-left: 35px;
+//   margin-right: 35px;
+//   color: #181818,
+//   background-color: orange;
+// `
+
 const StyledName = styled.span`
-  margin-top: 60px;
-  font-size: 60px;
+  margin-top: 50px;
+  font-size: 80px;
   text-align: center;
 
   @media screen and (max-width: 575px) {
@@ -53,9 +61,7 @@ const StyledName = styled.span`
 `
 
 const StyledLandingTitle = styled.span`
-  margin-top: 60px;
-  margin-left: 35px;
-  margin-right: 35px;
+  margin-top: 50px;
   font-size: 60px;
   text-align: center;
 
@@ -68,12 +74,11 @@ const StyledLandingTitle = styled.span`
 `
 
 const StyledTitle = styled.span`
-  margin-top: 60px;
+  margin-top: 50px;
   margin-left: 35px;
   margin-right: 35px;
   font-size: 60px;
   text-align: center;
-  // background-color: orange;
 
   @media screen and (max-width: 575px) {
     margin-left: 20px;
@@ -87,9 +92,6 @@ const StyledTitle = styled.span`
 const StyledMoreInfo = styled.span`
   font-size: 40px;
   text-align: center;
-  margin-top: 60px;
-  margin-left: 35px;
-  margin-right: 35px;
 
   @media screen and (max-width: 575px) {
     margin-left: 0px;
@@ -162,11 +164,10 @@ const StyledRow = styled.span`
   }
 `
 
-// const StyledColumn = styled.span`
-//   display: flex;
-//   flex-direction: column;
-//   // flex: 1;
-// `
+const StyledColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+`
 
 // const StyledParagraph = styled.p`
 //   font-size: 30px;
@@ -193,12 +194,27 @@ const StyledRow = styled.span`
 //   }
 // `
 
-const EmojiContainer = styled.div`
-  font-size: 30px;
+
+const StyledFadeContainer = styled.div`
+  margin-top: 60px;
+  margin-left: 100px;
+  margin-right: 100px;
+  @media screen and (max-width: 575px) {
+    margin-left: 0px;
+    margin-right: 0px;
+    font-size: 25px;
+    text-align: center;
+  }
+
 `
 
 
 class App extends Component {
+  state = {
+    fadeInMoreInfo: false,
+    fadeInCurrentJob: false
+  }
+
   renderContent () {
     return (
       <React.Fragment>
@@ -220,8 +236,6 @@ class App extends Component {
           ]}
           src={todov1}
         />
-
-        
       </React.Fragment>
     )
   }
@@ -232,16 +246,26 @@ class App extends Component {
       <div>
         <StyledAppContainer>
           <StyledHeadshot src={evan}/>
-          <Typist cursor={{show: false}}>
-            <StyledContainer>
+            <StyledColumn>
               <StyledName style={{ color: '#181818' }}>Evan Dweck</StyledName>
-              <StyledLandingTitle style={{ color: '#181818' }}>
-                I am a <StyledTextBlueUnderline>Software Engineer</StyledTextBlueUnderline> and <StyledTextBlueUnderline>Designer</StyledTextBlueUnderline> 🎨.
-              </StyledLandingTitle>
-              <Typist.Delay ms={1000} />
+              <StyledFadeContainer>
+                <Fade duration={3500} delay={500}>
+                  <StyledLandingTitle style={{ color: '#181818' }}>
+                    I am a <StyledTextBlueUnderline>Software Engineer</StyledTextBlueUnderline> and <StyledTextBlueUnderline>Designer</StyledTextBlueUnderline> 🎨.
+                  </StyledLandingTitle>
+                </Fade>
+              </StyledFadeContainer>
+            </StyledColumn>
+          <StyledFadeContainer>
+            <Fade duration={3500} delay={2500}>
               <StyledMoreInfo>I specialize in taking <StyledTextBlueUnderline>concepts and ideas</StyledTextBlueUnderline>💡 to life providing elegant and scalable <StyledTextBlueUnderline>software solutions</StyledTextBlueUnderline>.</StyledMoreInfo>
-            </StyledContainer>
-          </Typist >
+            </Fade>
+          </StyledFadeContainer>
+          <StyledFadeContainer>
+            <Fade duration={3500} delay={5000}>
+              <StyledMoreInfo>I currently work @ <StyledTextBlueUnderline>Anvil Foundry</StyledTextBlueUnderline> <a href="https://www.useanvil.com/" target="_blank"><img src={anvil}/></a> .</StyledMoreInfo>
+            </Fade>
+          </StyledFadeContainer>
         </StyledAppContainer>
         {this.renderContent()}
       </div>
