@@ -28,7 +28,6 @@ const StyledHeadshot = styled.img`
     margin-bottom: 20px;
     margin-left: 0px;
     margin-right: 0px;
-    text-align: left;
   }
 `
 
@@ -60,7 +59,7 @@ const StyledName = styled.span`
     margin-top: 20px;
     margin-left: 0px;
     margin-right: 0px;
-    font-size: 40px;
+    font-size: 30px;
   }
 `
 
@@ -72,7 +71,6 @@ const StyledLandingTitle = styled.span`
     margin-left: 0px;
     margin-right: 0px;
     font-size: 25px;
-    text-align: left;
   }
 `
 
@@ -100,8 +98,7 @@ const StyledMoreInfo = styled.span`
     margin-top: 20px;
     margin-left: 0px;
     margin-right: 0px;
-    font-size: 25px;
-    text-align: left;
+    font-size: 20px;
   }
 `
 
