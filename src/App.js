@@ -21,6 +21,15 @@ const StyledHeadshot = styled.img`
   width: 200px;
   margin-top: 60px;
   margin-bottom: 50px;
+
+  @media screen and (max-width: 575px) {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+
 `
 
 const StyledAppContainer = styled.div`
@@ -55,6 +64,7 @@ const StyledName = styled.span`
   text-align: center;
 
   @media screen and (max-width: 575px) {
+    margin-top: 20px;
     margin-left: 0px;
     margin-right: 0px;
     font-size: 40px;
@@ -67,6 +77,7 @@ const StyledLandingTitle = styled.span`
   text-align: center;
 
   @media screen and (max-width: 575px) {
+    margin-top: 20px;
     margin-left: 0px;
     margin-right: 0px;
     font-size: 25px;
@@ -95,6 +106,7 @@ const StyledMoreInfo = styled.span`
   text-align: center;
 
   @media screen and (max-width: 575px) {
+    margin-top: 20px;
     margin-left: 0px;
     margin-right: 0px;
     font-size: 25px;
