@@ -15,6 +15,20 @@ import todov1 from './img/todo-concept-v1.svg'
 import melons from './img/melons.gif'
 import ProjectRow from './components/ProjectRow'
 
+const StyledAppContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin-left: 35px;
+  margin-right: 35px;
+  text-align: center;
+
+  @media screen and (max-width: 575px) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+`
 
 const StyledHeadshot = styled.img`
   border-radius: 128px;
@@ -29,30 +43,6 @@ const StyledHeadshot = styled.img`
     margin-left: 0px;
     margin-right: 0px;
   }
-`
-
-const StyledAppContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
-  margin-left: 35px;
-  margin-right: 35px;
-  text-align: center;
-
- @media screen and (max-width: 575px) {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
-  // @media screen and (orientation:landscape) {
-  //   -ms-transform: rotate(-90deg); /* IE 9 */
-  //   -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
-  //   transform: rotate(-90deg);
-  //   // width: /* screen width */ ;
-  //   height: 100vh;
-  //   overflow: scroll;
-  // }
 `
 
 const StyledName = styled.span`
@@ -93,7 +83,7 @@ const StyledTitle = styled.span`
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 20px;
-    font-size: 30px;
+    font-size: 35px;
     text-align: left;
   }
 `
@@ -170,6 +160,31 @@ const StyledFadeContainer = styled.div`
   }
 `
 
+const StyledTitleContainer = styled.div`
+  margin-bottom: 50px;
+
+  @media screen and (max-width: 1000px) {
+    margin-left: 10px;
+    // margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (max-width: 575px) {
+    margin-left: 0px;
+    // margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+`
+
+const StyledAnvil = styled.img`
+  font-size: 40px;
+  vertical-align: middle;
+  @media screen and (max-width: 575px) {
+    font-size: 25px;
+  }
+`
+
 
 class App extends Component {
   state = {
@@ -180,11 +195,13 @@ class App extends Component {
   renderContent () {
     return (
       <React.Fragment>
-        <Fade right>
-          <StyledTitle>
-            <StyledTextPinkUnderline>Development</StyledTextPinkUnderline> & <StyledTextPinkUnderline>Design</StyledTextPinkUnderline>
-          </StyledTitle>
-        </Fade>
+        <StyledTitleContainer>
+          <Fade right>
+            <StyledTitle>
+              <StyledTextPinkUnderline>Development</StyledTextPinkUnderline> & <StyledTextPinkUnderline>Design</StyledTextPinkUnderline>
+            </StyledTitle>
+          </Fade>
+        </StyledTitleContainer>
         <ProjectRow 
           projectTitle="In Watermelons We Trust"
           paragraphs={['This concept came about when a friend bought the domain watermelons.io with the intention of setting up a web application where users could contribute their own artistic of a watermelon(s).','When drawing a melon in illustrator I got excited and decided to experiment with some 80’s inspired bright colors.']}
@@ -205,7 +222,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <React.Fragment>
         <StyledAppContainer>
           <StyledHeadshot src={evan}/>
             <StyledColumn>
@@ -227,12 +244,12 @@ class App extends Component {
           </StyledFadeContainer>
           <StyledFadeContainer>
             <Fade duration={3500} delay={5000}>
-              <StyledMoreInfo>I currently work @ <StyledTextBlueUnderline>Anvil Foundry</StyledTextBlueUnderline> <a href="https://www.useanvil.com/" target="_blank"><img src={anvil}/></a> .</StyledMoreInfo>
+              <StyledMoreInfo>I currently work @ <StyledTextBlueUnderline>Anvil Foundry </StyledTextBlueUnderline><a href="https://www.useanvil.com/" target="_blank"><StyledAnvil src={anvil}/></a>.</StyledMoreInfo>
             </Fade>
           </StyledFadeContainer>
         </StyledAppContainer>
         {this.renderContent()}
-      </div>
+      </React.Fragment>
     )
   }
 }
