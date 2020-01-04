@@ -28,8 +28,6 @@ const StyledHeadshot = styled.img`
     margin-left: 0px;
     margin-right: 0px;
   }
-
-
 `
 
 const StyledAppContainer = styled.div`
@@ -51,13 +49,6 @@ const StyledAppContainer = styled.div`
   // }
 `
 
-// const StyledContainer = styled(StyledAppContainer)`
-//   margin-left: 35px;
-//   margin-right: 35px;
-//   color: #181818,
-//   background-color: orange;
-// `
-
 const StyledName = styled.span`
   margin-top: 50px;
   font-size: 70px;
@@ -72,12 +63,10 @@ const StyledName = styled.span`
 `
 
 const StyledLandingTitle = styled.span`
-  margin-top: 50px;
   font-size: 60px;
   text-align: center;
 
   @media screen and (max-width: 575px) {
-    margin-top: 20px;
     margin-left: 0px;
     margin-right: 0px;
     font-size: 25px;
@@ -151,68 +140,17 @@ const StyledTextPinkUnderline = styled.span`
   }
 `
 
-// const StyledTitleRow = styled.span`
-//   display: flex;
-//   flex-direction: row;
-//   align-items: flex-start;
-//   margin-left: 35px;
-//   margin-right: 35px;
-//   background-color: green;
-// `
-
-const StyledRow = styled.span`
-  display: flex;
-  flex-direction: row;
-  margin-left: 35px;
-  margin-right: 35px;
-  margin-top: 40px;
-  // margin-bottom: 100px;
-  height: 100vh;
-  // background-color: orange;
-  @media screen and (max-width: 575px) {
-    display: block;
-    // background-color: pink;
-    margin-left: 20px;
-    margin-right : 20px;
-  }
-`
-
 const StyledColumn = styled.div`
   display: flex;
   flex-direction: column;
 `
-
-// const StyledParagraph = styled.p`
-//   font-size: 30px;
-//   // background-color: red;
-//   margin-right: 35px;
-//   @media screen and (max-width: 575px) {
-//     text-align: left;
-//     font-size: 20px;
-//     margin-right: 0px;
-//   }
-// `
-
-// const StyledImage = styled.img`
-//   height: auto; 
-//   width: auto; 
-//   max-width: 800px; 
-//   max-height: 600px;
-
-//   @media screen and (max-width: 575px) {
-//     max-width: 300px; 
-//     max-height: 200px;
-//     display: block;
-//     margin: 0 auto;
-//   }
-// `
-
 
 const StyledFadeContainer = styled.div`
   margin-top: 60px;
   margin-left: 100px;
   margin-right: 100px;
   @media screen and (max-width: 575px) {
+    margin-top: 20px;
     margin-left: 0px;
     margin-right: 0px;
     font-size: 25px;
