@@ -20,7 +20,7 @@ const StyledHeadshot = styled.img`
   border-radius: 128px;
   width: 200px;
   margin-top: 60px;
-  margin-bottom: 5%;
+  // margin-bottom: 5%;
 
   @media screen and (max-width: 575px) {
     width: 100px;
@@ -57,7 +57,7 @@ const StyledAppContainer = styled.div`
 
 const StyledName = styled.span`
   // margin-top: 50px;
-  margin-top: 5%;
+  margin-top: 10%;
   font-size: 70px;
   text-align: center;
 
@@ -105,7 +105,7 @@ const StyledMoreInfo = styled.span`
     // margin-top: 55%;
     margin-left: 0px;
     margin-right: 0px;
-    font-size: 16px;
+    font-size: 25px;
   }
 `
 
@@ -154,7 +154,7 @@ const StyledColumn = styled.div`
 
 const StyledFadeContainer = styled.div`
   // margin-top: 60px;
-  margin-top: 5%;
+  margin-top: 10%;
   margin-left: 100px;
   margin-right: 100px;
   @media screen and (max-width: 575px) {
