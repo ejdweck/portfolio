@@ -23,7 +23,13 @@ const StyledRow = styled.span`
   @media screen and (max-width: 1000px) {
     display: block;
     margin-left: 20px;
-    margin-right : 20px;
+    margin-right: 20px;
+	}
+	
+	@media screen and (max-width: 575px) {
+    // display: block;
+    margin-left: 20px;
+    margin-top: 20px;
   }
 `
 
@@ -62,7 +68,6 @@ const StyledImage = styled.img`
     max-width: 300px; 
     max-height: 200px;
     display: block;
-		// margin: 0 auto;
 		margin-left: 0px;
 		margin-bottom: 20px;
   }
@@ -79,7 +84,8 @@ const StyledProjectTitle = styled.span`
 	}
 	
 	@media screen and (max-width: 575px) {
-    margin-left: 20px;
+		margin-left: 20px;
+		margin-bottom: 20px;
     font-size: 20px;
     text-align: left;
   }
