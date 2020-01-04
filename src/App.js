@@ -33,6 +33,8 @@ const StyledAppContainer = styled.div`
     display:none;
     z-index:100;
     position:fixed;
+    height: 100vh;
+    background-color: pink;
   }
   
   @media (orientation:landscape){
