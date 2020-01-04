@@ -23,6 +23,15 @@ const StyledAppContainer = styled.div`
   flex-direction: column;
   align-items: center;
   height: 100vh;
+
+  @media screen and (orientation:landscape) {
+    -ms-transform: rotate(-90deg); /* IE 9 */
+    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+    transform: rotate(-90deg);
+    // width: /* screen width */ ;
+    height: 100vh;
+    overflow: scroll;
+  }
 `
 
 const StyledContainer = styled(StyledAppContainer)`
