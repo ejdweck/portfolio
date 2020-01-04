@@ -33,11 +33,13 @@ const StyledAppContainer = styled.div`
     display:none;
     z-index:100;
     position:fixed;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
     background-color: pink;
+    font-size: 40px;
   }
   
-  @media (orientation:landscape){
+  @media (orientation:landscape) and (max-height: 375px){
     #turn{
       display:block;
     }
@@ -240,7 +242,7 @@ class App extends Component {
       <React.Fragment>
         <StyledAppContainer>
           <div id="turn">
-            Please turn your device
+            Please turn your device to portrait mode.  This site is mobile optimized for portrait only due to reasons 🦊.
           </div>
           <StyledHeadshot src={evan}/>
             <StyledColumn>
