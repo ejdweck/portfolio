@@ -28,7 +28,20 @@ const StyledAppContainer = styled.div`
     margin-left: 10px;
     margin-right: 10px;
   }
-`
+
+  #turn {
+    display:none;
+    z-index:100;
+    position:fixed;
+  }
+  
+  @media (orientation:landscape){
+    #turn{
+      display:block;
+    }
+  }
+    
+    `
 
 const StyledHeadshot = styled.img`
   border-radius: 128px;
@@ -224,6 +237,9 @@ class App extends Component {
     return (
       <React.Fragment>
         <StyledAppContainer>
+          <div id="turn">
+            Please turn your device
+          </div>
           <StyledHeadshot src={evan}/>
             <StyledColumn>
               <a href="https://www.linkedin.com/in/evan-dweck-0a4657b6/" target="_blank" style={{ textDecoration: 'none'}}>
