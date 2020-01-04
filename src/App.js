@@ -13,7 +13,7 @@ import todov1 from './img/todo-concept-v1.svg'
 
 // gifs
 import melons from './img/melons.gif'
-import bbox from './img/bbox.gif'
+import bbox from './img/nourish-bbox-mobile.gif'
 import trailblazers from './img/trailblazers-chatroom.gif'
 import realcourseguide from './img/realcourseguide.gif'
 
@@ -222,10 +222,8 @@ class App extends Component {
         <ProjectRow 
           projectTitle="In Watermelons We Trust"
           paragraphs={[
-            'This concept came about when a friend bought the domain watermelons.io with the intention of setting up a web application where users could contribute their own artistic of a watermelon(s).'
-            ,'When drawing a melon in illustrator I got excited and decided to experiment with some 80’s inspired bright colors.',
-            'I’m a firm believer in the less is more style of approach and when I look at my handwritten todo lists I realized that I can boil it down to 3 catergories - Work, Home & Misc.',
-            'I’m a firm believer in the less is more style of approach and when I look at my handwritten todo lists I realized that I can boil it down to 3 catergories - Work, Home & Misc.',
+            'This concept came about when a friend bought the domain watermelons.io with the intention of setting up a web application where users could contribute their own artistic of a watermelon(s).',
+            'When drawing a melon in illustrator I got excited and decided to experiment with some 80’s inspired bright colors.',
             'I’m a firm believer in the less is more style of approach and when I look at my handwritten todo lists I realized that I can boil it down to 3 catergories - Work, Home & Misc.',
           ]}
           src={melons}
@@ -234,7 +232,6 @@ class App extends Component {
           projectTitle="The Real Course Guide"
           paragraphs={[
             'Every programmer ever has designed a simple todo list at some point - here is my latest concept!',
-            'I’m a firm believer in the less is more style of approach and when I look at my handwritten todo lists I realized that I can boil it down to 3 catergories - Work, Home & Misc.',
             'I’m a firm believer in the less is more style of approach and when I look at my handwritten todo lists I realized that I can boil it down to 3 catergories - Work, Home & Misc.',
             'I’m a firm believer in the less is more style of approach and when I look at my handwritten todo lists I realized that I can boil it down to 3 catergories - Work, Home & Misc.',
           ]}
@@ -246,7 +243,6 @@ class App extends Component {
             'Every programmer ever has designed a simple todo list at some point - here is my latest concept!',
             'I’m a firm believer in the less is more style of approach and when I look at my handwritten todo lists I realized that I can boil it down to 3 catergories - Work, Home & Misc.',
             'I’m a firm believer in the less is more style of approach and when I look at my handwritten todo lists I realized that I can boil it down to 3 catergories - Work, Home & Misc.',
-            'I’m a firm believer in the less is more style of approach and when I look at my handwritten todo lists I realized that I can boil it down to 3 catergories - Work, Home & Misc.',
           ]}
           src={realcourseguide}
         />
@@ -254,7 +250,6 @@ class App extends Component {
           projectTitle="BBox mobile ordering app concept"
           paragraphs={[
             'Every programmer ever has designed a simple todo list at some point - here is my latest concept!',
-            'I’m a firm believer in the less is more style of approach and when I look at my handwritten todo lists I realized that I can boil it down to 3 catergories - Work, Home & Misc.',
             'I’m a firm believer in the less is more style of approach and when I look at my handwritten todo lists I realized that I can boil it down to 3 catergories - Work, Home & Misc.',
             'I’m a firm believer in the less is more style of approach and when I look at my handwritten todo lists I realized that I can boil it down to 3 catergories - Work, Home & Misc.',
           ]}
