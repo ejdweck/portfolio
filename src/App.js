@@ -103,7 +103,7 @@ const StyledMoreInfo = styled.span`
     margin-top: 20px;
     margin-left: 0px;
     margin-right: 0px;
-    font-size: 20px;
+    font-size: 16px;
   }
 `
 
