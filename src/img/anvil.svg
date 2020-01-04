@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="30px" viewBox="0 0 56 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>mark-dark</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Black" transform="translate(-28.000000, -23.000000)">
+            <g id="mark-black" transform="translate(29.000000, 24.000000)">
+                <g>
+                    <path d="M17.9041574,12.451043 C16.237531,12.373664 12.7926887,12.1011285 8.57870695,10.5015191 C5.76938578,9.43511285 2.9098168,7.34534144 0,4.23220486 L0,2.3811849 L14,2.3811849 L14,1.16666667 L18,1.16666667 L18,0 L53.6666667,0 L53.6666667,4.66666667 C49.0620936,5.44191262 46.275947,6.8536603 43.7526713,8.90190972 C41.2293956,11.0605469 39.8649839,13.7969473 39.6594362,17.1111111 L39.6594362,19.4444444 L45.880546,24.1111111 L45.880546,28 L38.1041587,28 C38.1041587,27.1408904 37.4077128,26.4444444 36.5486032,26.4444444 L26.4398559,26.4444444 C25.5807463,26.4444444 24.8843003,27.1408904 24.8843003,28 L17.107913,28 L17.107913,24.1111111 L23.3290229,19.4444444 L23.3290229,17.252931 C23.33078,17.2058297 23.3316648,17.1585531 23.3316648,17.1111111 C23.3316648,14.7335275 21.1094374,12.7712265 18.2361817,12.4813471 C18.1314827,12.4667015 18.021055,12.4564704 17.9041574,12.451043 Z" id="Combined-Shape-Copy-6" stroke="#7AEFB2" stroke-width="2" fill-opacity="0.526154891" fill="#488A67"></path>
+                    <rect id="Rectangle-3" fill="#7AEFB2" x="17" y="2" width="2" height="11"></rect>
+                    <rect id="Rectangle-4" fill="#7AEFB2" x="35" y="18" width="4" height="2"></rect>
+                    <rect id="Rectangle-4-Copy" fill="#7AEFB2" x="33" y="15" width="7" height="2"></rect>
+                    <rect id="Rectangle-5" fill="#7AEFB2" x="13" y="3" width="2" height="3"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
