@@ -89,22 +89,6 @@ const StyledLandingTitle = styled.span`
   }
 `
 
-const StyledTitle = styled.span`
-  margin-top: 50px;
-  margin-left: 35px;
-  margin-right: 35px;
-  font-size: 60px;
-  text-align: center;
-
-  @media screen and (max-width: 575px) {
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    font-size: 35px;
-    text-align: left;
-  }
-`
-
 const StyledMoreInfo = styled.span`
   font-size: 40px;
   text-align: center;
@@ -118,6 +102,36 @@ const StyledMoreInfo = styled.span`
     margin-left: 0px;
     margin-right: 0px;
     font-size: 25px;
+  }
+`
+
+const StyledTitle = styled.span`
+  margin-top: 50px;
+  margin-left: 35px;
+  margin-right: 35px;
+  font-size: 60px;
+  text-align: center;
+
+  @media screen and (max-width: 575px) {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    text-align: left;
+  }
+`
+
+const StyledTitleContainer = styled.div`
+  margin-bottom: 50px;
+
+  @media screen and (max-width: 1000px) {
+    margin-left: 10px;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (max-width: 575px) {
+    margin-left: 0px;
+    margin-bottom: 20px;
   }
 `
 
@@ -177,23 +191,6 @@ const StyledFadeContainer = styled.div`
   }
 `
 
-const StyledTitleContainer = styled.div`
-  margin-bottom: 50px;
-
-  @media screen and (max-width: 1000px) {
-    margin-left: 10px;
-    // margin-right: 20px;
-    margin-bottom: 20px;
-  }
-
-  @media screen and (max-width: 575px) {
-    margin-left: 0px;
-    // margin-right: 20px;
-    margin-bottom: 20px;
-  }
-
-`
-
 const StyledAnvil = styled.img`
   font-size: 40px;
   vertical-align: middle;
@@ -201,7 +198,6 @@ const StyledAnvil = styled.img`
     font-size: 25px;
   }
 `
-
 
 class App extends Component {
   state = {

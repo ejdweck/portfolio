@@ -62,7 +62,8 @@ const StyledImage = styled.img`
     max-width: 300px; 
     max-height: 200px;
     display: block;
-		margin: 0 auto;
+		// margin: 0 auto;
+		margin-left: 0px;
 		margin-bottom: 20px;
   }
 `
