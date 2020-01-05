@@ -17,6 +17,7 @@ import bbox from './img/nourish-bbox-mobile.gif'
 import trailblazers from './img/trailblazers-chatroom.gif'
 import realcourseguide from './img/realcourseguide.gif'
 
+import ProjectPage from './components/ProjectPage'
 import ProjectRow from './components/ProjectRow'
 
 const StyledAppContainer = styled.div`
@@ -48,8 +49,7 @@ const StyledAppContainer = styled.div`
       display:block;
     }
   }
-    
-    `
+`
 
 const StyledHeadshot = styled.img`
   border-radius: 128px;
@@ -261,6 +261,18 @@ class App extends Component {
 
 
   render() {
+    const melonsProjectTitle = (
+      <StyledMoreInfo style={{ color: '#181818' }}>
+        <StyledTextBlueUnderline>Maybe Later</StyledTextBlueUnderline> is a todo app concept.
+      </StyledMoreInfo>
+    )
+
+    const melonsTechnologiesUsed = (
+      <StyledMoreInfo style={{ color: '#181818' }}>
+        Technologies Used: <StyledTextBlueUnderline>Figma</StyledTextBlueUnderline> 🖋.
+      </StyledMoreInfo>
+    )
+
     return (
       <React.Fragment>
         <StyledAppContainer>
@@ -291,7 +303,13 @@ class App extends Component {
             </Fade>
           </StyledFadeContainer>
         </StyledAppContainer>
-        {this.renderContent()}
+        {/* {this.renderContent()} */}
+        <ProjectPage 
+          // projectTitle="THis is a test place holder how are we"
+          projectTitle={melonsProjectTitle}
+          technologiesUsed={melonsTechnologiesUsed}
+          src={melons}
+        />
       </React.Fragment>
     )
   }
