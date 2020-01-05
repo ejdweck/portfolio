@@ -12,6 +12,22 @@ import Fade from 'react-reveal/Fade';
 
 // import { SocialIcon } from 'react-social-icons';
 
+const StyledContainer = styled.div`
+	// background-color: pink;
+	// border-bottom: 10px solid grey;
+
+  background:
+    linear-gradient(
+      // to bottom, 
+      #FCE5FF 0%,
+      #FFFFFF 100%
+    )
+    // left 
+    // bottom
+    no-repeat; 
+  background-size: 100%  ;/* if linear-gradient, we need to resize it */
+
+`
 const StyledRow = styled.span`
   display: flex;
   flex-direction: row;
@@ -120,7 +136,7 @@ class ProjectRow extends Component {
 	render() {
 		const { projectTitle, src } = this.props
 		return (
-			<React.Fragment>
+			<StyledContainer>
 				<StyledColumn>
 					<StyledFadeContainer>
 						<Fade left duration={1000}>
@@ -140,7 +156,7 @@ class ProjectRow extends Component {
 						{this.renderParagraphs()}
 					</StyledColumn>
 				</StyledRow>
-			</React.Fragment>
+			</StyledContainer>
 		)
 	}
 }

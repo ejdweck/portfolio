@@ -43,7 +43,8 @@ const StyledContainer = styled.div`
 
 const StyledColumn = styled.span`
   display: flex;
-	flex-direction: column;
+  flex-direction: column;
+  margin-top: 10%;
 `
 
 const StyledImage = styled.img`
@@ -51,7 +52,7 @@ const StyledImage = styled.img`
   width: auto; 
   max-width: 800px; 
   max-height: 600px;
-
+  
   @media screen and (max-width: 1000px) {
     max-width: 600px; 
     max-height: 400px;
@@ -88,7 +89,7 @@ const StyledText = styled.span`
 `
 
 const StyledFadeContainer = styled.div`
-  margin-top: 10%;
+  margin-top: 5%;
 `
 
 class ProjectPage extends Component {
@@ -103,12 +104,12 @@ class ProjectPage extends Component {
 						</Fade>
 					</StyledFadeContainer>
           <StyledFadeContainer>
-						<Fade left duration={2000} delay={1000}>
+						<Fade left duration={2000}>
 							<StyledText>{technologiesUsed}</StyledText>
 						</Fade>
 					</StyledFadeContainer>
 					<StyledFadeContainer>
-            <Fade left duration={3000} delay={3000}>
+            <Fade right duration={2000}>
               <StyledImage src={src}/>
             </Fade>
           </StyledFadeContainer>

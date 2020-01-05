@@ -5,6 +5,7 @@ import Fade from 'react-reveal/Fade';
 
 // imgs
 import evan from './img/headshot.jpeg'
+import reactIcon from './img/favicon.ico'
 
 // svgs
 import dash from './img/name-underline.svg'
@@ -195,13 +196,68 @@ const StyledFadeContainer = styled.div`
   }
 `
 
-const StyledAnvil = styled.img`
+const StyledImg = styled.img`
   font-size: 40px;
   vertical-align: middle;
   @media screen and (max-width: 575px) {
     font-size: 25px;
   }
 `
+
+const todoProjectTitle = (
+  <StyledMoreInfo style={{ color: '#181818' }}>
+    <StyledTextBlueUnderline>Maybe Later</StyledTextBlueUnderline> is a todo app concept.
+  </StyledMoreInfo>
+)
+
+const todoTechnologiesUsed = (
+  <StyledMoreInfo style={{ color: '#181818' }}>
+    Technologies Used: <StyledTextBlueUnderline>Figma</StyledTextBlueUnderline> 🖋.
+  </StyledMoreInfo>
+)
+
+const melonsProjectTitle = (
+  <StyledMoreInfo style={{ color: '#181818' }}>
+    <StyledTextBlueUnderline>In Watermelons We Trust</StyledTextBlueUnderline> is a 80's inspired digital art interperation.
+  </StyledMoreInfo>
+)
+
+// todo get react little svg
+const melonsTechnologiesUsed = (
+  <StyledMoreInfo style={{ color: '#181818' }}>
+    Technologies Used: <StyledTextBlueUnderline>Adobe Illustrator</StyledTextBlueUnderline> 🎨, <StyledTextBlueUnderline>React</StyledTextBlueUnderline><StyledImg alt="react-logo" src={reactIcon}/>, <StyledTextBlueUnderline>Styled Components</StyledTextBlueUnderline> 💅.
+  </StyledMoreInfo>
+)
+
+const bboxProjectTitle = (
+  <StyledMoreInfo style={{ color: '#181818' }}>
+    <StyledTextBlueUnderline>BBox</StyledTextBlueUnderline> was an early concept for a mobile ordering app built for BBOX robotic cafe while interning for nourish technology.
+  </StyledMoreInfo>
+)
+
+// todo get react little svg
+const bboxTechnologiesUsed = (
+  <StyledMoreInfo style={{ color: '#181818' }}>
+    Technologies Used: <StyledTextBlueUnderline>React-Native</StyledTextBlueUnderline> <StyledImg alt="react-logo" src={reactIcon}/>, <StyledTextBlueUnderline>CSS</StyledTextBlueUnderline>.
+  </StyledMoreInfo>
+)
+
+const realCourseGuideProjectTitle = (
+  <StyledMoreInfo style={{ color: '#181818' }}>
+    <StyledTextBlueUnderline>The Real Course Guide</StyledTextBlueUnderline> is a full stack web application that provides UW Madison Students past grade distribution data to make more informed registration decisions.
+  </StyledMoreInfo>
+)
+
+// todo get react little svg
+const realCourseGuideTechnologiesUsed = (
+  <StyledMoreInfo style={{ color: '#181818' }}>
+    Technologies Used: <StyledTextBlueUnderline>Django</StyledTextBlueUnderline> 🎨, <StyledTextBlueUnderline>
+      React</StyledTextBlueUnderline><StyledImg alt="react-logo" src={reactIcon}/>, <StyledTextBlueUnderline>
+      react-bootstrap</StyledTextBlueUnderline>, <StyledTextBlueUnderline>
+      sqlite</StyledTextBlueUnderline>.
+
+  </StyledMoreInfo>
+)
 
 class App extends Component {
   state = {
@@ -261,17 +317,7 @@ class App extends Component {
 
 
   render() {
-    const melonsProjectTitle = (
-      <StyledMoreInfo style={{ color: '#181818' }}>
-        <StyledTextBlueUnderline>Maybe Later</StyledTextBlueUnderline> is a todo app concept.
-      </StyledMoreInfo>
-    )
-
-    const melonsTechnologiesUsed = (
-      <StyledMoreInfo style={{ color: '#181818' }}>
-        Technologies Used: <StyledTextBlueUnderline>Figma</StyledTextBlueUnderline> 🖋.
-      </StyledMoreInfo>
-    )
+    
 
     return (
       <React.Fragment>
@@ -299,17 +345,38 @@ class App extends Component {
           </StyledFadeContainer>
           <StyledFadeContainer>
             <Fade duration={3500} delay={5000}>
-              <StyledMoreInfo>I currently work @ <StyledTextBlueUnderline>Anvil Foundry </StyledTextBlueUnderline><a href="https://www.useanvil.com/" target="_blank"><StyledAnvil src={anvil}/></a>.</StyledMoreInfo>
+              <StyledMoreInfo>I currently work @ <StyledTextBlueUnderline>Anvil Foundry </StyledTextBlueUnderline><a href="https://www.useanvil.com/" target="_blank"><StyledImg src={anvil}/></a>.</StyledMoreInfo>
             </Fade>
           </StyledFadeContainer>
         </StyledAppContainer>
         {/* {this.renderContent()} */}
         <ProjectPage 
-          // projectTitle="THis is a test place holder how are we"
+          projectTitle={todoProjectTitle}
+          technologiesUsed={todoTechnologiesUsed}
+          src={todov1}
+        />
+        <ProjectPage 
           projectTitle={melonsProjectTitle}
           technologiesUsed={melonsTechnologiesUsed}
           src={melons}
         />
+        <ProjectPage 
+          projectTitle={realCourseGuideProjectTitle}
+          technologiesUsed={realCourseGuideTechnologiesUsed}
+          src={realcourseguide}
+        />
+        <ProjectPage 
+          projectTitle={bboxProjectTitle}
+          technologiesUsed={bboxTechnologiesUsed}
+          src={bbox}
+        />
+        <ProjectPage 
+          projectTitle={melonsProjectTitle}
+          technologiesUsed={melonsTechnologiesUsed}
+          src={trailblazers}
+        />
+
+
       </React.Fragment>
     )
   }
