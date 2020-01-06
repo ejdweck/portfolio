@@ -122,4 +122,4 @@
 
     # Basic-Auth allows you to password protect your whole site.
     # This feature may not be available on all plans.
-    Basic-Auth = "someuser:somepass
+    # Basic-Auth = "someuser:somepass
