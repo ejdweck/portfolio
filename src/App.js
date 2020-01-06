@@ -358,7 +358,7 @@ class App extends Component {
             </Fade>
           </StyledFadeContainer>
           <StyledFadeContainer>
-            <Fade duration={1500} delay={3000}>
+            <Fade duration={1500} delay={2500}>
               <StyledMoreInfo>I currently work @ <StyledTextBlueUnderline>Anvil Foundry </StyledTextBlueUnderline><a href="https://www.useanvil.com/" target="_blank"><StyledImg src={anvil}/></a>.</StyledMoreInfo>
             </Fade>
           </StyledFadeContainer>
