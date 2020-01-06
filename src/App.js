@@ -5,22 +5,23 @@ import Fade from 'react-reveal/Fade';
 
 // imgs
 import evan from './img/headshot.jpeg'
-import reactIcon from './img/favicon.ico'
-
+// import reactIcon from './img/favicon.ico'
+// import reactIcon from './img/react-logo.svg'
 // svgs
 import dash from './img/name-underline.svg'
 import anvil from './img/anvil.svg'
-import todov1 from './img/todo-concept-v1.svg'
 
 // gifs
 import melons from './img/melons.gif'
 import bbox from './img/nourish-bbox-mobile.gif'
 import trailblazers from './img/trailblazers-chatroom.gif'
 import realcourseguide from './img/realcourseguide.gif'
+import maybeLater from './img/maybe-later.gif'
 
 import ProjectPage from './components/ProjectPage'
 import ProjectRow from './components/ProjectRow'
 
+const reactIcon = ''
 const StyledAppContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -41,6 +42,7 @@ const StyledAppContainer = styled.div`
     position:fixed;
     height: 100%;
     width: 100%;
+    margin: 0px;
     background-color: pink;
     font-size: 40px;
   }
@@ -204,6 +206,18 @@ const StyledImg = styled.img`
   }
 `
 
+const StyledReactSVG = styled.img`
+  font-size: 40px;
+  vertical-align: middle;
+  @media screen and (max-width: 575px) {
+    font-size: 25px;
+  }
+`
+
+const StyledSpacer = styled.div`
+  height: 40vh;
+`
+
 const todoProjectTitle = (
   <StyledMoreInfo style={{ color: '#181818' }}>
     <StyledTextBlueUnderline>Maybe Later</StyledTextBlueUnderline> is a todo app concept.
@@ -291,7 +305,7 @@ class App extends Component {
             'I’m a firm believer in the less is more style of approach and when I look at my handwritten todo lists I realized that I can boil it down to 3 catergories - Work, Home & Misc.',
             'I’m a firm believer in the less is more style of approach and when I look at my handwritten todo lists I realized that I can boil it down to 3 catergories - Work, Home & Misc.',
           ]}
-          src={todov1}
+          src={maybeLater}
         />
         <ProjectRow 
           projectTitle="The Real Course Guide"
@@ -323,7 +337,7 @@ class App extends Component {
       <React.Fragment>
         <StyledAppContainer>
           <div id="turn">
-            Please turn your device to portrait mode.  This site is mobile optimized for portrait only due to reasons 🦊.
+            Please turn your device to portrait mode.  This site is mobile optimized for portrait only 🦊.
           </div>
           <StyledHeadshot src={evan}/>
             <StyledColumn>
@@ -331,7 +345,7 @@ class App extends Component {
                 <StyledName style={{ color: '#181818' }} href="google.com">Evan Dweck</StyledName>
               </a>
               <StyledFadeContainer>
-                <Fade duration={3500} delay={500}>
+                <Fade duration={1500} delay={500}>
                   <StyledLandingTitle style={{ color: '#181818' }}>
                     I am a <StyledTextBlueUnderline>Software Engineer</StyledTextBlueUnderline> and <StyledTextBlueUnderline>Designer</StyledTextBlueUnderline> 🎨.
                   </StyledLandingTitle>
@@ -339,12 +353,12 @@ class App extends Component {
               </StyledFadeContainer>
             </StyledColumn>
           <StyledFadeContainer>
-            <Fade duration={3500} delay={2500}>
+            <Fade duration={1500} delay={1500}>
               <StyledMoreInfo>I specialize in taking <StyledTextBlueUnderline>concepts and ideas</StyledTextBlueUnderline>💡 to life providing elegant and scalable <StyledTextBlueUnderline>software solutions</StyledTextBlueUnderline>.</StyledMoreInfo>
             </Fade>
           </StyledFadeContainer>
           <StyledFadeContainer>
-            <Fade duration={3500} delay={5000}>
+            <Fade duration={1500} delay={3000}>
               <StyledMoreInfo>I currently work @ <StyledTextBlueUnderline>Anvil Foundry </StyledTextBlueUnderline><a href="https://www.useanvil.com/" target="_blank"><StyledImg src={anvil}/></a>.</StyledMoreInfo>
             </Fade>
           </StyledFadeContainer>
@@ -353,28 +367,33 @@ class App extends Component {
         <ProjectPage 
           projectTitle={todoProjectTitle}
           technologiesUsed={todoTechnologiesUsed}
-          src={todov1}
+          src={maybeLater}
         />
+        <StyledSpacer />
         <ProjectPage 
           projectTitle={melonsProjectTitle}
           technologiesUsed={melonsTechnologiesUsed}
           src={melons}
         />
+        <StyledSpacer />
         <ProjectPage 
           projectTitle={realCourseGuideProjectTitle}
           technologiesUsed={realCourseGuideTechnologiesUsed}
           src={realcourseguide}
         />
+        <StyledSpacer />
         <ProjectPage 
           projectTitle={bboxProjectTitle}
           technologiesUsed={bboxTechnologiesUsed}
           src={bbox}
         />
+        <StyledSpacer />
         <ProjectPage 
           projectTitle={melonsProjectTitle}
           technologiesUsed={melonsTechnologiesUsed}
           src={trailblazers}
         />
+        <StyledSpacer />
 
 
       </React.Fragment>

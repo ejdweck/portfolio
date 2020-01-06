@@ -14,25 +14,14 @@ import Fade from 'react-reveal/Fade';
 
 const StyledContainer = styled.div`
 	// background-color: pink;
-	// border-bottom: 10px solid grey;
-
-  background:
-    linear-gradient(
-      // to bottom, 
-      #FCE5FF 0%,
-      #FFFFFF 100%
-    )
-    // left 
-    // bottom
-    // no-repeat; 
-  background-size: 100%  ;/* if linear-gradient, we need to resize it */
+  // border-bottom: 10px solid grey;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  margin-left: 35px;
-  margin-right: 35px;
+  // margin-left: 35px;
+  // margin-right: 35px;
   text-align: center;
 
   @media screen and (max-width: 575px) {
@@ -52,6 +41,8 @@ const StyledImage = styled.img`
   width: auto; 
   max-width: 800px; 
   max-height: 600px;
+  // margin-bottom: 40px;
+  // background: pink;
   
   @media screen and (max-width: 1000px) {
     max-width: 600px; 
@@ -108,7 +99,7 @@ class ProjectPage extends Component {
 							<StyledText>{technologiesUsed}</StyledText>
 						</Fade>
 					</StyledFadeContainer>
-					<StyledFadeContainer>
+					<StyledFadeContainer style={{marginBottom: '10%'}}>
             <Fade right duration={2000}>
               <StyledImage src={src}/>
             </Fade>
