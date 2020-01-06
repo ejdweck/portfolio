@@ -274,65 +274,7 @@ const realCourseGuideTechnologiesUsed = (
 )
 
 class App extends Component {
-  state = {
-    fadeInMoreInfo: false,
-    fadeInCurrentJob: false
-  }
-
-  renderContent () {
-    return (
-      <React.Fragment>
-        <StyledTitleContainer>
-          <Fade right>
-            <StyledTitle>
-              <StyledTextPinkUnderline>Development</StyledTextPinkUnderline> & <StyledTextPinkUnderline>Design</StyledTextPinkUnderline>
-            </StyledTitle>
-          </Fade>
-        </StyledTitleContainer>
-        <ProjectRow 
-          projectTitle="In Watermelons We Trust"
-          paragraphs={[
-            'This concept came about when a friend bought the domain watermelons.io with the intention of setting up a web application where users could contribute their own artistic of a watermelon(s).',
-            'When drawing a melon in illustrator I got excited and decided to experiment with some 80’s inspired bright colors.',
-            'I’m a firm believer in the less is more style of approach and when I look at my handwritten todo lists I realized that I can boil it down to 3 catergories - Work, Home & Misc.',
-          ]}
-          src={melons}
-        />
-        <ProjectRow 
-          projectTitle="The Real Course Guide"
-          paragraphs={[
-            'Every programmer ever has designed a simple todo list at some point - here is my latest concept!',
-            'I’m a firm believer in the less is more style of approach and when I look at my handwritten todo lists I realized that I can boil it down to 3 catergories - Work, Home & Misc.',
-            'I’m a firm believer in the less is more style of approach and when I look at my handwritten todo lists I realized that I can boil it down to 3 catergories - Work, Home & Misc.',
-          ]}
-          src={maybeLater}
-        />
-        <ProjectRow 
-          projectTitle="The Real Course Guide"
-          paragraphs={[
-            'Every programmer ever has designed a simple todo list at some point - here is my latest concept!',
-            'I’m a firm believer in the less is more style of approach and when I look at my handwritten todo lists I realized that I can boil it down to 3 catergories - Work, Home & Misc.',
-            'I’m a firm believer in the less is more style of approach and when I look at my handwritten todo lists I realized that I can boil it down to 3 catergories - Work, Home & Misc.',
-          ]}
-          src={realcourseguide}
-        />
-        <ProjectRow 
-          projectTitle="BBox mobile ordering app concept"
-          paragraphs={[
-            'Every programmer ever has designed a simple todo list at some point - here is my latest concept!',
-            'I’m a firm believer in the less is more style of approach and when I look at my handwritten todo lists I realized that I can boil it down to 3 catergories - Work, Home & Misc.',
-            'I’m a firm believer in the less is more style of approach and when I look at my handwritten todo lists I realized that I can boil it down to 3 catergories - Work, Home & Misc.',
-          ]}
-          src={bbox}
-        />
-      </React.Fragment>
-    )
-  }
-
-
   render() {
-    
-
     return (
       <React.Fragment>
         <StyledAppContainer>
