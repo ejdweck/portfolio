@@ -16,6 +16,8 @@
   # Directory with the serverless Lambda functions to deploy to AWS.
   functions = "project/functions/"
 
+  baseurl = "https://epic-heyrovsky-9665a5.netlify.com/"
+
 # Production context: all deploys from the Production branch set in your site's
 # deploy contexts will inherit these settings.
 [context.production]
