@@ -13,15 +13,10 @@ import Fade from 'react-reveal/Fade';
 // import { SocialIcon } from 'react-social-icons';
 
 const StyledContainer = styled.div`
-	// background-color: pink;
-  // border-bottom: 10px solid grey;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  // margin-left: 35px;
-  // margin-right: 35px;
   text-align: center;
 
   @media screen and (max-width: 575px) {

@@ -2,26 +2,39 @@ import React, { Component } from 'react';
 import styled from 'styled-components'
 import Typist from 'react-typist';
 import Fade from 'react-reveal/Fade';
+import { SocialIcon } from 'react-social-icons';
 
-// imgs
+
 import evan from './img/headshot.jpeg'
-// import reactIcon from './img/favicon.ico'
-// import reactIcon from './img/react-logo.svg'
-// svgs
+
+// logos
+import heroku from './img/heroku.png'
+import pythonDjango from './img/python-django.jpg'
 import dash from './img/name-underline.svg'
 import anvil from './img/anvil.svg'
+import reactIcon from './img/react-logo.svg'
+import reactBootstrap from './img/react-bootstrap.svg'
+import bootstrap from './img/bootstrap.png'
+import linkedin from './img/linkedin-icon.svg'
+import sqlite from './img/sqlite.png'
+import redux from './img/redux.png'
+import semantic from './img/semantic.png'
+import socketio from './img/socketio.svg'
+import express from './img/express.png'
+import github from './img/github.svg'
+import email from './img/email.png'
 
-// gifs
+
+// gifs and project snapshots
 import melons from './img/melons.gif'
 import bbox from './img/nourish-bbox-mobile.gif'
 import trailblazers from './img/trailblazers-chatroom.gif'
 import realcourseguide from './img/realcourseguide.gif'
 import maybeLater from './img/maybe-later.gif'
+import justabite from './img/justabite.jpg'
 
 import ProjectPage from './components/ProjectPage'
-import ProjectRow from './components/ProjectRow'
 
-const reactIcon = ''
 const StyledAppContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -116,7 +129,7 @@ const StyledTitle = styled.span`
   margin-left: 35px;
   margin-right: 35px;
   margin-top: 50px;
-    margin-bottom: 40px;
+  margin-bottom: 40px;
   font-size: 60px;
   text-align: center;
 
@@ -198,7 +211,7 @@ const StyledFadeContainer = styled.div`
   }
 `
 
-const StyledImg = styled.img`
+const StyledAnvil = styled.img`
   font-size: 40px;
   vertical-align: middle;
   @media screen and (max-width: 575px) {
@@ -206,11 +219,20 @@ const StyledImg = styled.img`
   }
 `
 
-const StyledReactSVG = styled.img`
-  font-size: 40px;
-  vertical-align: middle;
+const StyledSVG = styled.img`
+  width: 40px;
+  vertical-align: middle
   @media screen and (max-width: 575px) {
-    font-size: 25px;
+    width: 25px;
+  }
+`
+
+const StyledSocialIcon = styled.div`
+  margin: 5px;
+  height: 10px;
+  width: 10px;
+  @media screen and (max-width: 575px) {
+    margin: 10px;
   }
 `
 
@@ -232,14 +254,15 @@ const todoTechnologiesUsed = (
 
 const melonsProjectTitle = (
   <StyledMoreInfo style={{ color: '#181818' }}>
-    <StyledTextBlueUnderline>In Watermelons We Trust</StyledTextBlueUnderline> is a 80's inspired digital art interperation.
+    <StyledTextBlueUnderline>In Watermelons We Trust</StyledTextBlueUnderline> 🍉 is a 80's inspired digital art interperation.
   </StyledMoreInfo>
 )
 
-// todo get react little svg
 const melonsTechnologiesUsed = (
   <StyledMoreInfo style={{ color: '#181818' }}>
-    Technologies Used: <StyledTextBlueUnderline>Adobe Illustrator</StyledTextBlueUnderline> 🎨, <StyledTextBlueUnderline>React</StyledTextBlueUnderline><StyledImg alt="react-logo" src={reactIcon}/>, <StyledTextBlueUnderline>Styled Components</StyledTextBlueUnderline> 💅.
+    Technologies Used: <StyledTextBlueUnderline>Adobe Illustrator</StyledTextBlueUnderline> 🎨
+    , <StyledTextBlueUnderline>React</StyledTextBlueUnderline> <StyledSVG alt="logo" src={reactIcon}/>
+    , <StyledTextBlueUnderline>Styled Components</StyledTextBlueUnderline> 💅.
   </StyledMoreInfo>
 )
 
@@ -249,10 +272,10 @@ const bboxProjectTitle = (
   </StyledMoreInfo>
 )
 
-// todo get react little svg
 const bboxTechnologiesUsed = (
   <StyledMoreInfo style={{ color: '#181818' }}>
-    Technologies Used: <StyledTextBlueUnderline>React-Native</StyledTextBlueUnderline> <StyledImg alt="react-logo" src={reactIcon}/>, <StyledTextBlueUnderline>CSS</StyledTextBlueUnderline>.
+    Technologies Used: <StyledTextBlueUnderline>React-Native</StyledTextBlueUnderline> <StyledSVG alt="logo" src={reactIcon}/>
+    , <StyledTextBlueUnderline>CSS</StyledTextBlueUnderline>
   </StyledMoreInfo>
 )
 
@@ -265,47 +288,34 @@ const realCourseGuideProjectTitle = (
 // todo get react little svg
 const realCourseGuideTechnologiesUsed = (
   <StyledMoreInfo style={{ color: '#181818' }}>
-    Technologies Used: <StyledTextBlueUnderline>Django</StyledTextBlueUnderline> 🎨, <StyledTextBlueUnderline>
-      React</StyledTextBlueUnderline><StyledImg alt="react-logo" src={reactIcon}/>, <StyledTextBlueUnderline>
-      react-bootstrap</StyledTextBlueUnderline>, <StyledTextBlueUnderline>
-      sqlite</StyledTextBlueUnderline>.
+    Technologies Used: <StyledTextBlueUnderline>Django</StyledTextBlueUnderline> 🎨
+    , <StyledTextBlueUnderline> Bootstrap</StyledTextBlueUnderline> <StyledSVG alt="logo" src={bootstrap}/>
+    , <StyledTextBlueUnderline>sqlite</StyledTextBlueUnderline> <StyledSVG alt="logo" src={sqlite}/>
+    , <StyledTextBlueUnderline>Heroku</StyledTextBlueUnderline> <StyledSVG src={heroku} />
+  </StyledMoreInfo>
+)
 
+const blazersProjectTitle = (
+  <StyledMoreInfo style={{ color: '#181818' }}>
+    <StyledTextBlueUnderline>TrailBlazers Chat</StyledTextBlueUnderline> is a socket io chatroom made to explore websockets.
+  </StyledMoreInfo>
+)
+
+const blazersTechnologiesUsed = (
+  <StyledMoreInfo style={{ color: '#181818' }}>
+    Technologies Used: <StyledTextBlueUnderline>React</StyledTextBlueUnderline> <StyledSVG alt="logo" src={reactIcon}/>,
+    <StyledTextBlueUnderline>Redux </StyledTextBlueUnderline> <StyledSVG alt="logo" src={redux}/>,
+    <StyledTextBlueUnderline>Semantic UI </StyledTextBlueUnderline> <StyledSVG alt="logo" src={semantic}/>,
+    <StyledTextBlueUnderline>Socket IO </StyledTextBlueUnderline> <StyledSVG alt="logo" src={socketio}/>,
+    <StyledTextBlueUnderline>Express </StyledTextBlueUnderline> <StyledSVG alt="logo" src={express}/>
   </StyledMoreInfo>
 )
 
 class App extends Component {
-  render() {
+
+  renderProjects() {
     return (
       <React.Fragment>
-        <StyledAppContainer>
-          <div id="turn">
-            Please turn your device to portrait mode.  This site is mobile optimized for portrait only 🦊.
-          </div>
-          <StyledHeadshot src={evan}/>
-            <StyledColumn>
-              <a href="https://www.linkedin.com/in/evan-dweck-0a4657b6/" target="_blank" style={{ textDecoration: 'none'}}>
-                <StyledName style={{ color: '#181818' }} href="google.com">Evan Dweck</StyledName>
-              </a>
-              <StyledFadeContainer>
-                <Fade duration={1500} delay={500}>
-                  <StyledLandingTitle style={{ color: '#181818' }}>
-                    I am a <StyledTextBlueUnderline>Software Engineer</StyledTextBlueUnderline> 🤖 and <StyledTextBlueUnderline>Designer</StyledTextBlueUnderline> 🎨.
-                  </StyledLandingTitle>
-                </Fade>
-              </StyledFadeContainer>
-            </StyledColumn>
-          <StyledFadeContainer>
-            <Fade duration={1500} delay={1500}>
-              <StyledMoreInfo>I specialize in taking <StyledTextBlueUnderline>concepts and ideas</StyledTextBlueUnderline>💡 to life providing elegant and scalable <StyledTextBlueUnderline>software solutions</StyledTextBlueUnderline>.</StyledMoreInfo>
-            </Fade>
-          </StyledFadeContainer>
-          <StyledFadeContainer>
-            <Fade duration={1500} delay={2500}>
-              <StyledMoreInfo>I currently work @ <StyledTextBlueUnderline>Anvil Foundry </StyledTextBlueUnderline><a href="https://www.useanvil.com/" target="_blank"><StyledImg src={anvil}/></a>.</StyledMoreInfo>
-            </Fade>
-          </StyledFadeContainer>
-        </StyledAppContainer>
-        {/* {this.renderContent()} */}
         <ProjectPage 
           projectTitle={todoProjectTitle}
           technologiesUsed={todoTechnologiesUsed}
@@ -325,19 +335,68 @@ class App extends Component {
         />
         <StyledSpacer />
         <ProjectPage 
+          projectTitle={realCourseGuideProjectTitle}
+          technologiesUsed={realCourseGuideTechnologiesUsed}
+          src={justabite}
+        />
+        <StyledSpacer />
+        <ProjectPage 
           projectTitle={bboxProjectTitle}
           technologiesUsed={bboxTechnologiesUsed}
           src={bbox}
         />
         <StyledSpacer />
         <ProjectPage 
-          projectTitle={melonsProjectTitle}
-          technologiesUsed={melonsTechnologiesUsed}
+          projectTitle={blazersProjectTitle}
+          technologiesUsed={blazersTechnologiesUsed}
           src={trailblazers}
         />
         <StyledSpacer />
+      </React.Fragment>
+    )
+  }
 
-
+  render() {
+    return (
+      <React.Fragment>
+        <StyledAppContainer>
+          <div id="turn">
+            Please turn your device to portrait mode.  This site is mobile optimized for portrait only 🦊.
+          </div>
+          <StyledHeadshot src={evan}/>
+            <StyledColumn>
+              <a href="https://www.linkedin.com/in/evan-dweck-0a4657b6/" target="_blank" style={{ textDecoration: 'none'}}>
+                <StyledName style={{ color: '#181818' }} href="google.com">Evan Dweck</StyledName>
+                <a style={{ marginLeft: '10px', marginRight: '5px' }} href="https://www.linkedin.com/in/evan-dweck-0a4657b6/" target="_blank" >
+                  <StyledSVG style={{ verticalAlign: 'baseline' }} src={linkedin} />
+                </a>
+                <a style={{margin: '5px'}} href="https://www.github.com/ejdweck/" target="_blank">
+                  <StyledSVG style={{ verticalAlign: 'baseline' }} src={github} />
+                </a>
+                <a style={{ marginLeft: '5px', marginRight: '10px' }} href="mailto:evanjordandweck@gmail.com">
+                  <StyledSVG style={{ verticalAlign: 'baseline' }} src={email} />
+                </a>
+              </a>
+              <StyledFadeContainer>
+                <Fade duration={1500} delay={500}>
+                  <StyledLandingTitle style={{ color: '#181818' }}>
+                    I am a <StyledTextBlueUnderline>Software Engineer</StyledTextBlueUnderline> 🤖 and <StyledTextBlueUnderline>Designer</StyledTextBlueUnderline> 🎨.
+                  </StyledLandingTitle>
+                </Fade>
+              </StyledFadeContainer>
+            </StyledColumn>
+          <StyledFadeContainer>
+            <Fade duration={1500} delay={1500}>
+              <StyledMoreInfo>I specialize in taking <StyledTextBlueUnderline>concepts and ideas</StyledTextBlueUnderline>💡 to life providing elegant and scalable <StyledTextBlueUnderline>software solutions</StyledTextBlueUnderline>.</StyledMoreInfo>
+            </Fade>
+          </StyledFadeContainer>
+          <StyledFadeContainer>
+            <Fade duration={1500} delay={2500}>
+              <StyledMoreInfo>I currently work @ <StyledTextBlueUnderline>Anvil Foundry </StyledTextBlueUnderline><a href="https://www.useanvil.com/" target="_blank"><StyledAnvil src={anvil}/></a>.</StyledMoreInfo>
+            </Fade>
+          </StyledFadeContainer>
+        </StyledAppContainer>
+        {this.renderProjects()}
       </React.Fragment>
     )
   }
