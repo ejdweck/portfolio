@@ -271,11 +271,11 @@ const blazersProjectTitle = (
 
 const blazersTechnologiesUsed = (
   <StyledMoreInfo style={{ color: '#181818' }}>
-    Technologies Used: <StyledTextBlueUnderline>React</StyledTextBlueUnderline> <StyledSVG alt="logo" src={reactIcon}/>,
-    <StyledTextBlueUnderline>Redux</StyledTextBlueUnderline> <StyledSVG alt="logo" src={redux}/>,
-    <StyledTextBlueUnderline>Semantic UI</StyledTextBlueUnderline> <StyledSVG alt="logo" src={semantic}/>,
-    <StyledTextBlueUnderline>Socket IO</StyledTextBlueUnderline> <StyledSVG alt="logo" src={socketio}/>,
-    <StyledTextBlueUnderline>Express</StyledTextBlueUnderline> <StyledSVG alt="logo" src={express}/>.
+    Technologies Used: <StyledTextBlueUnderline>React</StyledTextBlueUnderline> <StyledSVG alt="logo" src={reactIcon}/>
+    , <StyledTextBlueUnderline>Redux</StyledTextBlueUnderline> <StyledSVG alt="logo" src={redux}/>
+    , <StyledTextBlueUnderline>Semantic UI</StyledTextBlueUnderline> <StyledSVG alt="logo" src={semantic}/>
+    , <StyledTextBlueUnderline>Socket IO</StyledTextBlueUnderline> <StyledSVG alt="logo" src={socketio}/>
+    , <StyledTextBlueUnderline>Express</StyledTextBlueUnderline> <StyledSVG alt="logo" src={express}/>.
   </StyledMoreInfo>
 )
 
