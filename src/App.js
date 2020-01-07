@@ -46,6 +46,10 @@ const StyledAppContainer = styled.div`
   margin-right: 35px;
   text-align: center;
 
+  @media screen and (max-width: 995px) , screen and (max-height: 800px) {
+    height: 1000px;
+  }
+
   @media screen and (max-width: 575px) {
     margin-left: 10px;
     margin-right: 10px;
@@ -82,6 +86,9 @@ const StyledHeadshot = styled.img`
     margin-left: 0px;
     margin-right: 0px;
   }
+
+  
+
 `
 
 const StyledName = styled.span`
@@ -100,7 +107,7 @@ const StyledLandingTitle = styled.span`
   font-size: 60px;
   text-align: center;
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 575px) {
     font-size: 40px;
   }
 
@@ -116,7 +123,7 @@ const StyledMoreInfo = styled.span`
   text-align: center;
   padding: 20px;
   
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 575px) {
     font-size: 32px;
   }
 
@@ -184,6 +191,10 @@ const StyledSVG = styled.img`
 
 const StyledSpacer = styled.div`
   height: 20vh;
+  @media screen and (max-width: 995px) , screen and (max-height: 700px) {
+    height: 200px
+    margin-top: 200px;
+  }
 `
 
 const todoProjectTitle = (
