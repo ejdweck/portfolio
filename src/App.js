@@ -46,7 +46,7 @@ const StyledAppContainer = styled.div`
   margin-right: 35px;
   text-align: center;
 
-  @media screen and (max-width: 995px) , screen and (max-height: 800px) {
+  @media screen and (max-height: 1200px) {
     height: 1000px;
   }
 
