@@ -215,7 +215,7 @@ const StyledReactSVG = styled.img`
 `
 
 const StyledSpacer = styled.div`
-  height: 40vh;
+  height: 20vh;
 `
 
 const todoProjectTitle = (
@@ -289,7 +289,7 @@ class App extends Component {
               <StyledFadeContainer>
                 <Fade duration={1500} delay={500}>
                   <StyledLandingTitle style={{ color: '#181818' }}>
-                    I am a <StyledTextBlueUnderline>Software Engineer</StyledTextBlueUnderline> and <StyledTextBlueUnderline>Designer</StyledTextBlueUnderline> 🎨.
+                    I am a <StyledTextBlueUnderline>Software Engineer</StyledTextBlueUnderline> 🤖 and <StyledTextBlueUnderline>Designer</StyledTextBlueUnderline> 🎨.
                   </StyledLandingTitle>
                 </Fade>
               </StyledFadeContainer>
