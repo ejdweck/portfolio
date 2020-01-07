@@ -1,16 +1,7 @@
 import React, { Component } from 'react'
-import _ from 'lodash'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'; // ES6
 import Fade from 'react-reveal/Fade';
-
-//TODO uninstall
-//import * as FontAwesome from 'react-icons/lib/fa'
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-//import { faCoffee } from '@fortawesome/free-solid-svg-icons'
-
-
-// import { SocialIcon } from 'react-social-icons';
 
 const StyledContainer = styled.div`
   display: flex;
@@ -36,8 +27,6 @@ const StyledImage = styled.img`
   width: auto; 
   max-width: 800px; 
   max-height: 600px;
-  // margin-bottom: 40px;
-  // background: pink;
   
   @media screen and (max-width: 1000px) {
     max-width: 600px; 
@@ -58,16 +47,12 @@ const StyledImage = styled.img`
 
 const StyledText = styled.span`
   font-size: 40px;
-  margin-left: 35px;
-
   @media screen and (max-width: 1000px) {
-    margin-left: 20px;
     font-size: 30px;
     text-align: left;
 	}
 	
 	@media screen and (max-width: 575px) {
-		margin-left: 20px;
 		margin-bottom: 20px;
     font-size: 20px;
     text-align: left;
@@ -76,6 +61,8 @@ const StyledText = styled.span`
 
 const StyledFadeContainer = styled.div`
   margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
 `
 
 class ProjectPage extends Component {

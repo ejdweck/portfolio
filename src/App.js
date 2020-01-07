@@ -1,19 +1,14 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
-import Typist from 'react-typist';
 import Fade from 'react-reveal/Fade';
-import { SocialIcon } from 'react-social-icons';
-
 
 import evan from './img/headshot.jpeg'
 
 // logos
 import heroku from './img/heroku.png'
 import pythonDjango from './img/python-django.jpg'
-import dash from './img/name-underline.svg'
 import anvil from './img/anvil.svg'
 import reactIcon from './img/react-logo.svg'
-import reactBootstrap from './img/react-bootstrap.svg'
 import bootstrap from './img/bootstrap.png'
 import linkedin from './img/linkedin-icon.svg'
 import sqlite from './img/sqlite.png'
@@ -23,11 +18,18 @@ import socketio from './img/socketio.svg'
 import express from './img/express.png'
 import github from './img/github.svg'
 import email from './img/email.png'
+import node from './img/node.png'
+import redis from './img/redis.png'
+import mocha from './img/mocha.png'
+import chai from './img/chai.png'
+import enzyme from './img/enzyme.png'
+import wisco from './img/wiscologo.png'
 
 
 // gifs and project snapshots
 import melons from './img/melons.gif'
 import bbox from './img/nourish-bbox-mobile.gif'
+import nourish from './img/nourish.png'
 import trailblazers from './img/trailblazers-chatroom.gif'
 import realcourseguide from './img/realcourseguide.gif'
 import maybeLater from './img/maybe-later.gif'
@@ -112,6 +114,7 @@ const StyledLandingTitle = styled.span`
 const StyledMoreInfo = styled.span`
   font-size: 40px;
   text-align: center;
+  padding: 20px;
   
   @media screen and (max-width: 900px) {
     font-size: 32px;
@@ -122,36 +125,7 @@ const StyledMoreInfo = styled.span`
     margin-left: 0px;
     margin-right: 0px;
     font-size: 25px;
-  }
-`
-
-const StyledTitle = styled.span`
-  margin-left: 35px;
-  margin-right: 35px;
-  margin-top: 50px;
-  margin-bottom: 40px;
-  font-size: 60px;
-  text-align: center;
-
-  @media screen and (max-width: 575px) {
-    margin-left: 20px;
-    margin-right: 20px;
-    font-size: 30px;
-    text-align: left;
-  }
-`
-
-const StyledTitleContainer = styled.div`
-  margin-bottom: 50px;
-
-  @media screen and (max-width: 1000px) {
-    margin-left: 10px;
-    margin-bottom: 20px;
-  }
-
-  @media screen and (max-width: 575px) {
-    margin-left: 0px;
-    margin-bottom: 20px;
+    padding: 10px;
   }
 `
 
@@ -168,25 +142,6 @@ const StyledTextBlueUnderline = styled.span`
     bottom
     no-repeat; 
   background-size:100% 8px ;/* if linear-gradient, we need to resize it */
-
-  @media screen and (max-width: 575px) {
-    background-size: 100% 6px ;/* if linear-gradient, we need to resize it */
-  }
-`
-
-const StyledTextPinkUnderline = styled.span`
-  margin: 0px;
-  padding-bottom:5px;
-  background:
-    linear-gradient(
-      to right, 
-      #F5B5FC 0%,
-      #FCE5FF 100%
-    )
-    left 
-    bottom
-    no-repeat; 
-  background-size: 100% 8px ;/* if linear-gradient, we need to resize it */
 
   @media screen and (max-width: 575px) {
     background-size: 100% 6px ;/* if linear-gradient, we need to resize it */
@@ -227,15 +182,6 @@ const StyledSVG = styled.img`
   }
 `
 
-const StyledSocialIcon = styled.div`
-  margin: 5px;
-  height: 10px;
-  width: 10px;
-  @media screen and (max-width: 575px) {
-    margin: 10px;
-  }
-`
-
 const StyledSpacer = styled.div`
   height: 20vh;
 `
@@ -268,30 +214,52 @@ const melonsTechnologiesUsed = (
 
 const bboxProjectTitle = (
   <StyledMoreInfo style={{ color: '#181818' }}>
-    <StyledTextBlueUnderline>BBox</StyledTextBlueUnderline> was an early concept for a mobile ordering app built for BBOX robotic cafe while interning for nourish technology.
+    <StyledTextBlueUnderline>BBox</StyledTextBlueUnderline> was an early concept for a mobile ordering app built for BBOX robotic cafe while interning for nourish technology 
+    <a href="https://nourish.ai/" target="_blank" rel="noopener noreferrer">
+      <StyledSVG alt="logo" src={nourish} />
+    </a>.
   </StyledMoreInfo>
 )
 
 const bboxTechnologiesUsed = (
   <StyledMoreInfo style={{ color: '#181818' }}>
     Technologies Used: <StyledTextBlueUnderline>React-Native</StyledTextBlueUnderline> <StyledSVG alt="logo" src={reactIcon}/>
-    , <StyledTextBlueUnderline>CSS</StyledTextBlueUnderline>
+    , <StyledTextBlueUnderline>CSS</StyledTextBlueUnderline>.
   </StyledMoreInfo>
 )
 
 const realCourseGuideProjectTitle = (
   <StyledMoreInfo style={{ color: '#181818' }}>
-    <StyledTextBlueUnderline>The Real Course Guide</StyledTextBlueUnderline> is a full stack web application that provides UW Madison Students past grade distribution data to make more informed registration decisions.
+    <StyledTextBlueUnderline>The Real Course Guide</StyledTextBlueUnderline> is a full stack web application that provides UW Madison <StyledSVG alt="logo" src={wisco}/> Students past grade distribution data for registration decisions.
   </StyledMoreInfo>
 )
 
-// todo get react little svg
 const realCourseGuideTechnologiesUsed = (
   <StyledMoreInfo style={{ color: '#181818' }}>
-    Technologies Used: <StyledTextBlueUnderline>Django</StyledTextBlueUnderline> 🎨
+    Technologies Used: <StyledTextBlueUnderline>Django</StyledTextBlueUnderline> <StyledSVG alt="logo" src={pythonDjango}/>
     , <StyledTextBlueUnderline> Bootstrap</StyledTextBlueUnderline> <StyledSVG alt="logo" src={bootstrap}/>
     , <StyledTextBlueUnderline>sqlite</StyledTextBlueUnderline> <StyledSVG alt="logo" src={sqlite}/>
-    , <StyledTextBlueUnderline>Heroku</StyledTextBlueUnderline> <StyledSVG src={heroku} />
+    , <StyledTextBlueUnderline>Heroku</StyledTextBlueUnderline> <StyledSVG src={heroku} />.
+  </StyledMoreInfo>
+)
+
+const justabiteProjectTitle = (
+  <StyledMoreInfo style={{ color: '#181818' }}>
+    <StyledTextBlueUnderline>Just a Bite</StyledTextBlueUnderline> is a full stack web application that performs sentiment analysis 👽 on news headlines 📰.
+  </StyledMoreInfo>
+)
+
+const justabiteTechnologiesUsed = (
+  <StyledMoreInfo style={{ color: '#181818' }}>
+    Technologies Used: <StyledTextBlueUnderline>React</StyledTextBlueUnderline> <StyledSVG alt="logo" src={reactIcon}/>
+    , <StyledTextBlueUnderline>Node</StyledTextBlueUnderline> <StyledSVG alt="logo" src={node}/>
+    , <StyledTextBlueUnderline>Express</StyledTextBlueUnderline> <StyledSVG alt="logo" src={express}/>
+    , <StyledTextBlueUnderline>Heroku</StyledTextBlueUnderline> <StyledSVG alt="logo" src={heroku} />
+    , <StyledTextBlueUnderline>Enzyme</StyledTextBlueUnderline> <StyledSVG alt="logo" src={enzyme} />
+    , <StyledTextBlueUnderline>Chai</StyledTextBlueUnderline> <StyledSVG alt="logo" src={chai} />
+    , <StyledTextBlueUnderline>Mocha</StyledTextBlueUnderline> <StyledSVG alt="logo" src={mocha} />
+    , <StyledTextBlueUnderline>SocketIO</StyledTextBlueUnderline> <StyledSVG alt="logo" src={socketio} />
+    , <StyledTextBlueUnderline>Redis</StyledTextBlueUnderline> <StyledSVG alt="logo" src={redis} />.
   </StyledMoreInfo>
 )
 
@@ -304,10 +272,10 @@ const blazersProjectTitle = (
 const blazersTechnologiesUsed = (
   <StyledMoreInfo style={{ color: '#181818' }}>
     Technologies Used: <StyledTextBlueUnderline>React</StyledTextBlueUnderline> <StyledSVG alt="logo" src={reactIcon}/>,
-    <StyledTextBlueUnderline>Redux </StyledTextBlueUnderline> <StyledSVG alt="logo" src={redux}/>,
-    <StyledTextBlueUnderline>Semantic UI </StyledTextBlueUnderline> <StyledSVG alt="logo" src={semantic}/>,
-    <StyledTextBlueUnderline>Socket IO </StyledTextBlueUnderline> <StyledSVG alt="logo" src={socketio}/>,
-    <StyledTextBlueUnderline>Express </StyledTextBlueUnderline> <StyledSVG alt="logo" src={express}/>
+    <StyledTextBlueUnderline>Redux</StyledTextBlueUnderline> <StyledSVG alt="logo" src={redux}/>,
+    <StyledTextBlueUnderline>Semantic UI</StyledTextBlueUnderline> <StyledSVG alt="logo" src={semantic}/>,
+    <StyledTextBlueUnderline>Socket IO</StyledTextBlueUnderline> <StyledSVG alt="logo" src={socketio}/>,
+    <StyledTextBlueUnderline>Express</StyledTextBlueUnderline> <StyledSVG alt="logo" src={express}/>.
   </StyledMoreInfo>
 )
 
@@ -335,8 +303,8 @@ class App extends Component {
         />
         <StyledSpacer />
         <ProjectPage 
-          projectTitle={realCourseGuideProjectTitle}
-          technologiesUsed={realCourseGuideTechnologiesUsed}
+          projectTitle={justabiteProjectTitle}
+          technologiesUsed={justabiteTechnologiesUsed}
           src={justabite}
         />
         <StyledSpacer />
@@ -365,12 +333,12 @@ class App extends Component {
           </div>
           <StyledHeadshot src={evan}/>
             <StyledColumn>
-              <a href="https://www.linkedin.com/in/evan-dweck-0a4657b6/" target="_blank" style={{ textDecoration: 'none'}}>
+              <a href="https://www.linkedin.com/in/evan-dweck-0a4657b6/" rel="noopener noreferrer" target="_blank" style={{ textDecoration: 'none'}}>
                 <StyledName style={{ color: '#181818' }} href="google.com">Evan Dweck</StyledName>
-                <a style={{ marginLeft: '10px', marginRight: '5px' }} href="https://www.linkedin.com/in/evan-dweck-0a4657b6/" target="_blank" >
+                <a style={{ marginLeft: '10px', marginRight: '5px' }} href="https://www.linkedin.com/in/evan-dweck-0a4657b6/" rel="noopener noreferrer" target="_blank" >
                   <StyledSVG style={{ verticalAlign: 'baseline' }} src={linkedin} />
                 </a>
-                <a style={{margin: '5px'}} href="https://www.github.com/ejdweck/" target="_blank">
+                <a style={{margin: '5px'}} href="https://www.github.com/ejdweck/" rel="noopener noreferrer" target="_blank">
                   <StyledSVG style={{ verticalAlign: 'baseline' }} src={github} />
                 </a>
                 <a style={{ marginLeft: '5px', marginRight: '10px' }} href="mailto:evanjordandweck@gmail.com">
@@ -392,7 +360,7 @@ class App extends Component {
           </StyledFadeContainer>
           <StyledFadeContainer>
             <Fade duration={1500} delay={2500}>
-              <StyledMoreInfo>I currently work @ <StyledTextBlueUnderline>Anvil Foundry </StyledTextBlueUnderline><a href="https://www.useanvil.com/" target="_blank"><StyledAnvil src={anvil}/></a>.</StyledMoreInfo>
+              <StyledMoreInfo>I currently work @ <StyledTextBlueUnderline>Anvil Foundry </StyledTextBlueUnderline><a href="https://www.useanvil.com/" rel="noopener noreferrer" target="_blank"><StyledAnvil src={anvil}/></a>.</StyledMoreInfo>
             </Fade>
           </StyledFadeContainer>
         </StyledAppContainer>
