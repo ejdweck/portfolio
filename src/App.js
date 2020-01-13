@@ -27,13 +27,13 @@ import wisco from './img/wiscologo.png'
 
 
 // gifs and project snapshots
-import melons from './img/melons.gif'
 import bbox from './img/nourish-bbox-mobile.gif'
 import nourish from './img/nourish.png'
 import trailblazers from './img/trailblazers-chatroom.gif'
 import realcourseguide from './img/realcourseguide.gif'
 import maybeLater from './img/maybe-later.gif'
 import justabite from './img/justabite.jpg'
+import watermelonsUi from './img/watermelons-ui.gif'
 
 import ProjectPage from './components/ProjectPage'
 
@@ -211,15 +211,14 @@ const todoTechnologiesUsed = (
 
 const melonsProjectTitle = (
   <StyledMoreInfo style={{ color: '#181818' }}>
-    <StyledTextBlueUnderline>In Watermelons We Trust</StyledTextBlueUnderline> 🍉 is a 80's inspired digital art interperation.
+    <StyledTextBlueUnderline>Watermelons</StyledTextBlueUnderline> 🍉 is a 80's inspired app concept for sharing artistic interpretations of a watermelon.
   </StyledMoreInfo>
 )
 
 const melonsTechnologiesUsed = (
   <StyledMoreInfo style={{ color: '#181818' }}>
     Technologies Used: <StyledTextBlueUnderline>Adobe Illustrator</StyledTextBlueUnderline> 🎨
-    , <StyledTextBlueUnderline>React</StyledTextBlueUnderline> <StyledSVG alt="logo" src={reactIcon}/>
-    , <StyledTextBlueUnderline>Styled Components</StyledTextBlueUnderline> 💅.
+    , <StyledTextBlueUnderline>Figma</StyledTextBlueUnderline> 🖋.
   </StyledMoreInfo>
 )
 
@@ -296,27 +295,27 @@ class App extends Component {
     return (
       <React.Fragment>
         <ProjectPage 
+          projectTitle={melonsProjectTitle}
+          technologiesUsed={melonsTechnologiesUsed}
+          src={watermelonsUi}
+        />
+       <StyledSpacer />
+        <ProjectPage 
           projectTitle={todoProjectTitle}
           technologiesUsed={todoTechnologiesUsed}
           src={maybeLater}
         />
         <StyledSpacer />
         <ProjectPage 
-          projectTitle={melonsProjectTitle}
-          technologiesUsed={melonsTechnologiesUsed}
-          src={melons}
+          projectTitle={justabiteProjectTitle}
+          technologiesUsed={justabiteTechnologiesUsed}
+          src={justabite}
         />
         <StyledSpacer />
         <ProjectPage 
           projectTitle={realCourseGuideProjectTitle}
           technologiesUsed={realCourseGuideTechnologiesUsed}
           src={realcourseguide}
-        />
-        <StyledSpacer />
-        <ProjectPage 
-          projectTitle={justabiteProjectTitle}
-          technologiesUsed={justabiteTechnologiesUsed}
-          src={justabite}
         />
         <StyledSpacer />
         <ProjectPage 
